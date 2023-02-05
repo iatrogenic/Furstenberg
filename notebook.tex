@@ -1,0 +1,49 @@
+\documentclass[]{article}
+
+\usepackage{subfiles}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{nicefrac}
+
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\vspan}{span}
+
+\newcommand {\CC}{\mathbb{C}}
+\newcommand {\RR}{\mathbb{R}}
+\newcommand {\FF}{\mathbb{F}}
+\newcommand {\NN}{\mathbb{N}}
+\newcommand {\QQ}{\mathbb{Q}}
+\newcommand {\EE}{\mathbb{E}}
+\newcommand {\PP}{\mathbb{P}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{note}{Note}
+\newtheorem{notation}{Notation}
+%opening
+\title{Mathematical Notebook}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+\begin{notation} We will write
+	\begin{enumerate}
+		\item $\mathcal{M}_{n \times m}(\FF)$ for the set of $n$ by $m$ matrices with entries in the field $\FF$.
+		\item $\GL(n, \RR) = \{ M \in \mathcal{M}_{n \times n} (\RR): \det M \neq 0 \}$.
+		\item $\SL(n, \RR) = \{ M \in \mathcal{M}_{n \times n} (\RR): \det M = 1  \}$.
+		\item The transpose of $M \in \mathcal{M}_{n \times m} (\RR) $ is denoted by $M^\intercal$.
+	\end{enumerate}
+\end{notation}
+
+\section{Review}
+\subfile{review}
+
+
+\end{document}

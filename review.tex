@@ -1,0 +1,83 @@
+\subsubsection{Algebra}
+\begin{definition}
+	A set $S$ together with a binary operation $\cdot$ is called a \textit{semigroup} if, for every $a, b, c \in S$:
+	\[
+	(a \cdot b) \cdot c = a \cdot (b \cdot c).
+	\]
+\end{definition}
+
+\begin{definition}
+	A set $G$ together with a binary operation $\cdot$ is called a \textit{group} if it satisfies the following three axioms:
+	\begin{enumerate}
+		\item  $\forall a, b, c \in G: (a \cdot b) \cdot c = a \cdot (b \cdot c)$;
+		\item $\exists e \in G, \forall a \in G:  e \cdot a = a \cdot e = a$;
+		\item $\forall a \in G, \exists b \in G: a \cdot b = b \cdot a = e$.
+	\end{enumerate}
+Additionally, if the operation is commutative, then $G$ is called an \textit{Abelian} or \textit{commutative} group.
+\end{definition}
+
+\subsubsection{Topology and Functional Analysis}
+
+\begin{definition}
+	Let $X$ be a set and $\mathcal{O} \subseteq \mathcal{P}(X)$. The class $\mathcal{O}$ is a \textit{topology} on $X$ if the following conditions hold:
+	\begin{enumerate}
+		\item $\emptyset \in \mathcal{O}$;
+		\item $X \in \mathcal{O}$;
+		\item  Given any sequence $(A_i \in \mathcal{O} : i \in I)$ we have 
+		\[
+		\bigcup_{i \in I} A_i  \in \mathcal{O};
+		\]
+		\item If $A, B \in \mathcal{O}$ then $A \cap B \in \mathcal{O}$.
+	\end{enumerate}
+If these axioms are satisfied, we say a set $A \subseteq X$ is \textit{open} if $A \in \mathcal{O}$ and it is \text{closed} if $A^\complement$ is open. The pair $(X, \mathcal{O})$ is called a \textit{topological space}.
+\end{definition}
+
+\begin{definition}
+	Consider topological spaces $(X, \mathcal{O})$ and $(Y, \mathcal{T})$. A function $f : X \to Y$ is \textit{continuous} if
+	\[
+	\forall A \in \mathcal{T} : f^{-1}(A) \in \mathcal{O}.
+	\]
+\end{definition}
+
+\begin{definition}
+	Let $(S, \cdot)$ be a semigroup and $\mathcal{O}$ be a topology on $S$. If the map $(M_1, M_2) \mapsto M_1 \cdot M_2$ from $S^2$ to $S$ is continuous, then $(S, \cdot, \mathcal{O})$ is a \textit{topological semigroup}.
+\end{definition}
+
+\begin{definition}
+	Let $(G, \cdot)$ be a group and $\mathcal{O}$ be a topology on $G$. If the map $\cdot$ and $g \mapsto g^{-1}$ are continuous then $(G, \cdot, \mathcal{O} )$ is a \textit{topological group}.
+\end{definition}
+
+\begin{note}
+	In the previous definition, the domain of the binary operation is the Cartesian product $G \times G$. The topology on this set is the product topology. The same applies to the definition of topological semigroup.
+\end{note}
+
+\begin{example}
+	Since matrix multiplication is an associative operation, and the identity matrix acts as the multiplicative identity, the sets $\GL(n, \RR)$ and $\SL(n, \RR)$ are groups when considered together with the usual matrix multiplication operation.
+\end{example}
+
+\begin{definition}
+	Let $X$ be a vector space and let $\lVert \cdot \rVert_1$ and $\lVert \cdot \rVert_2$ be two norms on $X$. We say that $\lVert \cdot \rVert_2$ is \textit{equivalent} to $\lVert \cdot \rVert_1$ if there exists $M, m > 0$ such that,
+	\[
+	\forall x \in X: m \lVert x \rVert_1 \leq \lVert x \rVert_2 \leq M \lVert x \rVert_1
+	\]
+\end{definition}
+
+\begin{proposition}
+	Let $X$ be a finite-dimensional vector space. If $\lVert \cdot \rVert_1$, $\lVert \cdot \rVert_2$ are norms on $X$, then they are equivalent.
+\end{proposition}
+
+\begin{note}
+	The set $M_{n \times n} (\RR)$ together with the usual matrix multiplication and scalar multiplication is a vector space. Its dimension is clearly $\dim M_{n \times n} (\RR) = n^2$. The previous proposition tells us that the norm we choose to work with is not that important. No matter the norm we fix, the resulting space has an equivalent notion of convergence. Now my question is: Is convergence all that matters for us? Since equivalent norms differ in \textit{some} ways, how are we justified in ignoring those differences?
+	
+	
+\end{note}
+For convenience, unless specified otherwise, the norm on $\RR^d$ that will be considered is the usual Euclidean norm, which, to every $x = (x_1, \ldots, x_d) \in \RR^d$, assigns the quantity
+\[
+\lVert x \rVert = \left( \sum_{i=1}^d x_i^2 \right)^{\nicefrac{1}{2}}.
+\]
+
+As for $\mathcal{M}_{n \times n}(d,\RR)$ the norm we'll consider by default is the operator norm, which maps $M \in \mathcal{M}_{n \times n}(d,\RR)$ to
+
+\[
+\lVert M \rVert  = \sup \{  \lVert M x^\intercal \rVert  : x \in \RR^d, \lVert x \rVert = 1 \}.
+\]
