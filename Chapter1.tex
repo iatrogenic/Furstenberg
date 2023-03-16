@@ -1,0 +1,252 @@
+
+Here I collect notes and rewrite chapter 1 of \cite{bougerol2012products}.
+\begin{definition}
+	Let $(Y_i : i \in \NN)$ be a sequence of i.i.d. matrices with distribution $\mu$ such that
+	\[
+	\EE [ \log^+ (\lVert Y_1 \rVert)]  < \infty
+	\]
+	The limit
+	\[
+	\gamma = \lim_{n \to \infty} \frac{1}{n} \log \lVert Y_n \cdots Y_1 \rVert 
+	\]
+	is called the \textit{upper Lyapunov exponent}.
+	\begin{note}
+		In what ways does this differ from \cite{bochi2016furstenberg}? First of all, so far in \cite{bougerol2012products}, there's no restriction to $\SL_{\pm}(2, \RR)$, so it's not entirely clear what set is the expectation taken over.
+	\end{note}
+
+\begin{note}
+\begin{quote}
+	``Since all norms on the finite dimensional vector space $\mathcal{M}_{d \times d}(\RR)$ are equivalent, $\gamma$ is independent of the chosen norm."
+\end{quote}
+This is stated in \cite{bougerol2012products}. Once again, issues with norm equivalence. Why is this true? The expression for $\gamma$ depends explicitly on the values of 
+\end{note}
+
+\begin{example} (This is supposedly a ``degenerate" example)
+Consider a sequence of diagonal matrices $(Y_n)_{n \in \NN}$
+\[
+Y_n = 
+\begin{bmatrix}
+	a_{11}^{(n)} & 0  & 0 & \cdots & 0  \\
+	0 & a_{22} ^{(n)}& 0 & \cdots & 0 \\
+	0 & 0 & a_{33} ^{(n)}& \cdots & 0 \\
+	\vdots & \vdots & \vdots & & \vdots \\
+	0 & 0& 0 & \cdots & a_{mk}^{(n)}
+\end{bmatrix}.
+\]
+Then,
+ \[
+\gamma = \sup_i \EE \left [ \log \abs{a_{ii}^{(1)}} \right]
+\]
+and
+ \[
+\gamma = \lim \frac{1}{n} \log \norm{Y_n \cdots Y_1 }.
+\]
+This seems like a typo?
+\end{example}
+\end{definition}
+
+
+
+\subsection{The examples in \cite{bochi2016furstenberg}}
+
+\begin{example}
+	We take up example (1) in \cite{bochi2016furstenberg}. The set $O(2)$ is defined by
+	\[
+	O(2) = \left \{ 
+	\begin{bmatrix}
+		\cos \theta & - \sin \theta \\
+		\sin \theta & \cos \theta
+	\end{bmatrix}
+	: \theta \in [0, 2 \pi[
+	\right \}.
+	\]
+	
+	Consider the bijection $ A : [0, 2 \pi[ \to O(2)$ defined by 
+	\[ 
+	\theta \mapsto  
+	\begin{bmatrix}
+		\cos \theta & - \sin \theta \\
+		\sin \theta & \cos \theta
+	\end{bmatrix}.
+	\]
+	
+	Given two matrices in $O(2)$, say $A(\theta_1)$ and $A(\theta_2)$, their product $A(\theta_1) A(\theta_2)$ is also in $O(2)$, because
+	\begin{align*}
+		A(\theta_1) A(\theta_2) & = 
+		\begin{bmatrix}
+			\cos \theta_1 & - \sin \theta_1 \\
+			\sin \theta_1 & \cos \theta_1
+		\end{bmatrix}
+		\begin{bmatrix}
+			\cos \theta_2 & - \sin \theta_2 \\
+			\sin \theta_2 & \cos \theta_2
+		\end{bmatrix} \\
+		& = 
+		\begin{bmatrix}
+			\cos \theta_1 \cos \theta_2 - \sin \theta_1 \sin \theta_2 & - (\cos \theta_1 \sin \theta_2 + \sin \theta_1 \cos \theta_2) \\
+			\sin \theta_1 \cos \theta_2 + \cos \theta_1 \sin \theta_2 & - \sin \theta_1 \sin \theta_2 + \cos \theta_1 \cos \theta_2 
+		\end{bmatrix} \\
+		& = 
+		\begin{bmatrix}
+			\cos(\theta_1 + \theta_2) & - \sin(\theta_1 + \theta_2) \\
+			\sin(\theta_1 + \theta_2) & \cos(\theta_1 + \theta_2)
+		\end{bmatrix} \\
+		&= A(\theta_1 + \theta_2 \mod 2\pi).
+	\end{align*}
+We have a correspondence between $O(2)$ and $[0, 2\pi[$ thus we can draw random numbers $\theta_1, \ldots, \theta_n \in [0, 2\pi[$ and consider the product
+\[
+A(\theta_n) \cdots A(\theta_1) = A \left( \sum_{i=1}^{n}{\theta_i}  \mod 2 \pi \right).
+\]
+
+Now observe that given $\theta \in [0, 2\pi[$ we have that
+\begin{align*}
+A(\theta) (x,y)^\intercal& = 
+\begin{bmatrix}
+	\cos \theta & - \sin \theta \\
+	\sin \theta & \cos \theta
+\end{bmatrix}
+\begin{bmatrix}
+	x \\ 
+	y
+\end{bmatrix} \\
+& =  
+\begin{bmatrix}
+	x \cos \theta  - y \sin \theta \\
+	x \sin \theta + y \cos \theta
+\end{bmatrix} \\
+\end{align*}
+this implies that 
+\begin{align*}
+\norm{A(\theta) (x,y)^\intercal} & = \sqrt{(x \cos \theta - y \sin \theta)^2  + (x \sin \theta + y \cos \theta )^2}  \\
+ & = \sqrt{ x^2 + y^2 }.
+\end{align*}
+Therefore, $\norm{A(\theta) } = 1$. Applying this to $\norm{A(\theta_n) \cdots A(\theta_1)} = 1$ we get
+\[
+\gamma  = \lim_{n \to \infty} \frac{1}{n} \log(1) = 0.
+\]
+\end{example}
+
+\begin{example}
+	Assume that only two matrices occur:
+	\[
+A =
+	\begin{bmatrix}
+2 & 0 \\
+0 & \nicefrac{1}{2}
+	\end{bmatrix}
+\text{ and } R_{\nicefrac{\pi}{2}} =
+\begin{bmatrix}
+	0 & 1 \\
+	-1 & 0
+\end{bmatrix}.
+\]
+If we have a a probability space $( \{0, 1 \} , \mathcal{P}(\{0,1\}), \mu)$ with such that
+\[
+\mu(X) = \begin{cases}
+	p & \text{ if } X = \{ 0 \} \\
+	1-p & \text{ if } X = \{1 \}
+\end{cases}
+\]
+for some $0 < p < 1$. Let's compute the associated norms:
+\[
+Ax^\intercal = 	\begin{bmatrix}
+	2 & 0 \\
+	0 & \nicefrac{1}{2}
+\end{bmatrix}
+	\begin{bmatrix}
+	x \\
+	y
+\end{bmatrix}
+= 
+\begin{bmatrix}
+	2x \\
+	\nicefrac{1}{2}y
+\end{bmatrix}
+\implies
+\norm{Ax^\intercal} = \sqrt{4x^2 + \nicefrac{1}{4}y^2}
+\]
+and
+\[
+R_{\nicefrac{\pi}{2}}x^\intercal = 	\begin{bmatrix}
+	0 & 1 \\
+	-1 & 0
+\end{bmatrix}
+\begin{bmatrix}
+	x \\
+	y
+\end{bmatrix}
+= 
+\begin{bmatrix}
+	y \\
+	-x
+\end{bmatrix}
+\implies
+\norm{R_{\nicefrac{\pi}{2}}x^\intercal} = \sqrt{y^2 + x^2}
+\]
+Therefore we get
+\[
+\norm{A}  = \sup \left \{   \sqrt{4x^2 + \nicefrac{1}{4}y^2} : \sqrt{x^2 + y^2 } \leq 1 \right \} =2
+\]
+and
+\[
+\norm{R_{\nicefrac{\pi}{2}}} = \sup \{ \sqrt{y^2 + x^2} : \sqrt{x^2 + y^2 } \leq 1 \} = 1.
+\]
+
+Now we need the following proposition:
+\begin{proposition}
+	If $(X, \norm{\cdot})$ is a normed space and $k \in \RR_{> 0}$ then the map  $\norm{ \cdot }_k$ defined by
+	\[
+	\norm{ x }_k = k \norm{x} \qquad (\forall x \in X)
+	\]
+	 is a norm on $X$.
+\end{proposition}
+\begin{proof}
+	We have that
+	\begin{align*}
+		\norm{x}_k = 0 & \Leftrightarrow  k \norm{x} =  0 \\
+		&  \Leftrightarrow \norm{x} = 0 \\
+	  & \Leftrightarrow  x = 0.
+	\end{align*}
+If $\alpha$ is a scalar, then 
+ \begin{align*}
+	\norm{\alpha x }_k & = k \norm{\alpha x}  \\
+	& = k \abs{\alpha} \norm{x} \\
+	& = \abs{\alpha} \norm{x}_k.
+\end{align*}
+The triangle inequality is satisfied since
+\[
+\norm{x + y}_k = k \norm{x + y} \leq k (\norm{x} + \norm{y})  = \norm{x}_k + \norm{y}_k.
+\]
+\end{proof}
+What we can do is thus define a new norm for the space of matrices. We would like $\norm{A} = 1$ to be true, but since it isn't, we define the (equivalent) norm
+\[
+\norm{X}_0 = \frac{1}{2} \norm{X}
+\]
+for every two-by-two matrix $X$. Consequently, we now have
+\[
+\norm{A}_0 = 1
+\]
+and 
+\[
+\norm{R}_0 = \frac{1}{2}.\]
+Now consider a sequence of random variables $Y_1, \ldots, Y_n$ such that for each $i = 1 , \ldots, n$ the matrix $Y_i$ can be equal to either $A$ or $R$. We want to prove the following inequality
+\[
+\norm{Y_n \cdots Y_1}_0 \leq \norm{Y_n}_0 \cdots  \norm{Y_1}_0.
+\]
+Unfortunately, this is not true. We can check that $\norm{A^2}_0 \geq \norm{A}_0 \norm{A}_0$, and thus this method of proof fails.
+\begin{note}
+	This actually makes sense. If this proof worked, it would not draw upon any of the probabilistic aspects of the problem, and thus would work as well for the infinite product $\cdots A_3 A_2 A_1$, but for this specific sequence we have $\gamma = \log 2 \neq 0$. Thus, it seems likely that any proof of this example will necessarily include some probability.
+\end{note}
+%(Check that this is correct)
+%Since \[
+%\norm{Y_1 \cdots Y_n} \leq \norm{Y_1} \cdots \norm{Y_n} \implies \log{\norm{Y_1 \cdots Y_n}} \leq \log ( \norm{Y_1} \cdots \norm{Y_n}) = \sum_{i=1}^n \log \norm{Y_i} \leq n \log 2
+%\]
+%therefore
+%\[
+% \frac{1}{n} \log \norm{Y_1 \cdots Y_n} \leq \log 2.
+%\]
+%Seems wrong, but if we have $p=1$ in the definition of $\mu$ then it should be equal, no? I mean
+%\[
+%\frac{1}{n} \log \norm{Y_1 \cdots Y_n} = \log 2 \neq 0.
+%\]
+\end{example}

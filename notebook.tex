@@ -5,6 +5,7 @@
 \usepackage{amsthm}
 \usepackage{mathtools}
 \usepackage{nicefrac}
+\usepackage{physics}
 
 \DeclareMathOperator{\GL}{GL}
 \DeclareMathOperator{\SL}{SL}
@@ -37,13 +38,24 @@
 	\begin{enumerate}
 		\item $\mathcal{M}_{n \times m}(\FF)$ for the set of $n$ by $m$ matrices with entries in the field $\FF$.
 		\item $\GL(n, \RR) = \{ M \in \mathcal{M}_{n \times n} (\RR): \det M \neq 0 \}$.
-		\item $\SL(n, \RR) = \{ M \in \mathcal{M}_{n \times n} (\RR): \det M = 1  \}$.
+		\item $\SL_+(n, \RR) = \{ M \in \mathcal{M}_{n \times n} (\RR): \det M = 1  \}$.
+		\item $\SL_-(n, \RR) = \{ M \in \mathcal{M}_{n \times n} (\RR): \det M = -1  \}$.
 		\item The transpose of $M \in \mathcal{M}_{n \times m} (\RR) $ is denoted by $M^\intercal$.
+		\item $f^+ = \sup(f,0)$.
 	\end{enumerate}
 \end{notation}
 
 \section{Review}
 \subfile{review}
 
+\subsection{Probability Theory}
+\subfile{probability}
 
+\section{Ch1}
+\subfile{Chapter1}
+
+
+
+\bibliographystyle{plain} % We choose the "plain" reference style
+\bibliography{refs} % Entries are in the refs.bib file
 \end{document}

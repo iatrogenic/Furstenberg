@@ -16,7 +16,9 @@
 Additionally, if the operation is commutative, then $G$ is called an \textit{Abelian} or \textit{commutative} group.
 \end{definition}
 
-\subsubsection{Topology and Functional Analysis}
+
+
+\subsubsection{Topology}
 
 \begin{definition}
 	Let $X$ be a set and $\mathcal{O} \subseteq \mathcal{P}(X)$. The class $\mathcal{O}$ is a \textit{topology} on $X$ if the following conditions hold:
@@ -55,6 +57,8 @@ If these axioms are satisfied, we say a set $A \subseteq X$ is \textit{open} if 
 	Since matrix multiplication is an associative operation, and the identity matrix acts as the multiplicative identity, the sets $\GL(n, \RR)$ and $\SL(n, \RR)$ are groups when considered together with the usual matrix multiplication operation.
 \end{example}
 
+\subsubsection{Normed spaces and bounded linear operators}
+
 \begin{definition}
 	Let $X$ be a vector space and let $\lVert \cdot \rVert_1$ and $\lVert \cdot \rVert_2$ be two norms on $X$. We say that $\lVert \cdot \rVert_2$ is \textit{equivalent} to $\lVert \cdot \rVert_1$ if there exists $M, m > 0$ such that,
 	\[
@@ -76,8 +80,17 @@ For convenience, unless specified otherwise, the norm on $\RR^d$ that will be co
 \lVert x \rVert = \left( \sum_{i=1}^d x_i^2 \right)^{\nicefrac{1}{2}}.
 \]
 
-As for $\mathcal{M}_{n \times n}(d,\RR)$ the norm we'll consider by default is the operator norm, which maps $M \in \mathcal{M}_{n \times n}(d,\RR)$ to
+As for $\mathcal{M}_{n \times n}(d,\RR)$, the norm we'll consider by default is the operator norm, which maps $M \in \mathcal{M}_{n \times n}(d,\RR)$ to
 
 \[
 \lVert M \rVert  = \sup \{  \lVert M x^\intercal \rVert  : x \in \RR^d, \lVert x \rVert = 1 \}.
 \]
+
+One useful property of the operator norm is the following.
+\begin{proposition}
+	Let $V, W$ and $X$ be normed spaces and $T : V \to W$, $L :  W \to X$ be bounded linear operators. Then 
+	\[
+	\lVert LT \rVert \leq \lVert L \rVert \lVert T \rVert,
+	\]
+where $\lVert \cdot \rVert$ denotes the operator norm.
+\end{proposition}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.22)  5 FEB 2023 00:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.22)  15 MAR 2023 01:31
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -159,35 +159,45 @@ Package: nicefrac 1998/08/04 v0.9b Nice fractions
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 ))
-\c@theorem=\count269
-\c@proposition=\count270
-\c@definition=\count271
-\c@example=\count272
-\c@note=\count273
-\c@notation=\count274
+(/usr/local/texlive/2021/texmf-dist/tex/latex/physics/physics.sty
+Package: physics 
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2021-02-18 L3 programming layer (loader) 
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count275
+\l__color_backend_stack_int=\count269
 \l__pdf_internal_box=\box50
-)
-(./notebook.aux)
+))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-2020-10-
+01.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.
+tex))))
+\c@theorem=\count270
+\c@proposition=\count271
+\c@definition=\count272
+\c@example=\count273
+\c@note=\count274
+\c@notation=\count275
+ (./notebook.aux)
 \openout1 = `notebook.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
@@ -232,13 +242,13 @@ e
 \Gin@req@height=\dimen160
 \Gin@req@width=\dimen161
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 35.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 36.
 
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 35.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 36.
 
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -247,40 +257,43 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (0.8802pt too wide) in paragraph at lines 55--56
+Overfull \hbox (0.8802pt too wide) in paragraph at lines 57--58
 \OT1/cmr/m/n/10 iden-tity ma-trix acts as the mul-ti-plica-tive iden-tity, the 
 sets $[](\OML/cmm/m/it/10 n; \U/msb/m/n/10 R\OT1/cmr/m/n/10 )$ and $[](\OML/cmm
 /m/it/10 n; \U/msb/m/n/10 R\OT1/cmr/m/n/10 )$
  []
 
-) [2] (./notebook.aux) ) 
+[2]) (./probability.tex) (./Chapter1.tex [3] [4] [5] [6]) (./notebook.bbl)
+[7] (./notebook.aux) ) 
 Here is how much of TeX's memory you used:
- 3168 strings out of 478994
- 44753 string characters out of 5858184
- 341875 words of memory out of 5000000
- 20620 multiletter control sequences out of 15000+600000
- 411332 words of font info for 58 fonts, out of 8000000 for 9000
+ 3807 strings out of 478994
+ 51997 string characters out of 5858184
+ 364899 words of memory out of 5000000
+ 21237 multiletter control sequences out of 15000+600000
+ 411639 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 81i,5n,88p,589b,252s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7
-.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.
-pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msa
-m7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/
-msbm10.pfb>
-Output written on notebook.pdf (2 pages, 144246 bytes).
+ 81i,15n,89p,589b,387s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2021/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.
+pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
+fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
+></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.p
+fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm
+10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/
+msbm7.pfb>
+Output written on notebook.pdf (7 pages, 186497 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
+ 92 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
